@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# 🍕 Task Manager - Gerenciador de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Preview: [website](https://task-manager-seven-azure.vercel.app/)
 
-Currently, two official plugins are available:
+## 📝 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Um aplicativo de gerenciamento de tarefas com funcionalidades de edição, adição e remoção de tarefas, com interface intuitiva e responsiva.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Tailwind CSS
+- Zod (Validação)
+- Firebase
 
-- Configure the top-level `parserOptions` property like this:
+## ✨ Funcionalidades
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Registro com email/senha
+- Login social (Google)
+- Recuperação de senha
+- Perfil de usuário personalizável
+- Criação de tarefas
+- Edição de tarefas
+- Remoção de tarefas
+- Upload de imagem de perfil
+
+## 🔧 Configuração do Projeto
+
+### Pré-requisitos
+
+- Node.js (v18+)
+- npm ou yarn
+- Conta no firebase
+
+### Instalação
+
+#### Lembre-se de configurar seu firebase corretamente
+
+- Você vai precisar criar um projeto e configurar as tasks e usuários
+- Após configurar o firebase, crie um arquivo firebase.ts na pasta lib e adicione as configurações do seu projeto lá
+
+```bash
+git clone https://github.com/crishard/Menu-Management-App.git
+cd Menu-Management-App
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Comandos
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- `npm run dev`: Iniciar aplicação
+- `npm run build`: Construir para produção
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🌟 Contribuição
+
+1. Faça um fork do projeto
+2. Crie sua feature branch (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request
