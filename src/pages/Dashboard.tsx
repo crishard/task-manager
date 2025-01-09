@@ -20,9 +20,9 @@ const Dashboard: React.FC = () => {
     } = useTaskManagement()
 
     return (
-        <div className="container lg:px-20 px-5 sm:px-10 py-12">
+        <div className="container px-5 sm:px-10 py-12">
             <Header />
-            <div className="flex space-x-4 mb-4">
+            <div className="flex space-x-2 mb-4">
                 <Dialog open={isDialogOpen} onOpenChange={handleDialogOpenChange}>
                     <DialogTrigger asChild className="mb-6">
                         <Button onClick={() => setIsDialogOpen(true)} className="text-lg py-5">
